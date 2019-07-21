@@ -10,6 +10,7 @@
     <title>Product Hunt</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
 <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -54,6 +55,7 @@
         {% csrf_token %}
         <input type="hidden">
       </form>
+      <a class="nav-item nav-link" href="{% url 'create' %}"><span class="oi oi-plus"></span></a>
       {% else %}
       <a class="nav-item nav-link" href="{% url 'signup' %}">Sign Up</a>
       <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
